@@ -4,8 +4,8 @@ require 'bundler/setup'
 Bundler.require
 
 # dootenv
-require 'dotenv/load'
-Dotenv.load('../config.env')
+require 'dotenv'
+Dotenv.load('config.env')
 
 # Requires
 require 'date'

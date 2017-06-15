@@ -12,7 +12,7 @@ def run_ipdo
     threads << Thread.new { wait_for_ipdo(today - 3) }
   else
     send_slack('#ipdo', "Hoje é #{weekday}. Vou monitorar o IPDO de ontem.")
-    threads << Thread.new { wait_for_ipdo(today - 2) }
+    threads << Thread.new { wait_for_ipdo(today - 1) }
   end
 
   threads.each do |thread|
