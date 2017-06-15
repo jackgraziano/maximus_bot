@@ -1,5 +1,5 @@
 Slack.configure do |config|
-  config.token = 'xoxb-198073611270-MvuoKvrxU6yMOu0qzUQZAW1c'
+  config.token = ENV['SLACK_BOT_KEY']
 end
 @client = Slack::Web::Client.new
 
