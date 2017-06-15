@@ -1,4 +1,4 @@
 config.env
-/data/mapas/eta/
-/data/mapas/global/
-/data/send/
+/data/mapas/eta/*.*
+/data/mapas/global/*.*
+/data/send/*.*
