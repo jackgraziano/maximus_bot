@@ -12,7 +12,7 @@ def run_ipdo
     threads << Thread.new { wait_for_ipdo(today - 3) }
   else
     send_slack('#ipdo', "Hoje é #{weekday}. Vou monitorar o IPDO de ontem.")
-    threads << Thread.new { wait_for_ipdo(today - 1) }
+    threads << Thread.new { wait_for_ipdo(today - 2) }
   end
 
   threads.each do |thread|
@@ -45,7 +45,7 @@ def wait_for_ipdo(date)
   #download
   Net::HTTP.start("www.ons.org.br") { |http|
     resp = http.get(url)
-    open('ipdo.pdf', "wb") { |file|
+    open('data/send/ipdo.pdf', "wb") { |file|
       file.write(resp.body)
      }
   }

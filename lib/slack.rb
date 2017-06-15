@@ -1,5 +1,5 @@
 Slack.configure do |config|
-  config.token = 'xoxb-198073611270-Rkq6A9IzYiOgU5POxAMXYppp'
+  config.token = 'xoxb-198073611270-MvuoKvrxU6yMOu0qzUQZAW1c'
 end
 @client = Slack::Web::Client.new
 
@@ -12,7 +12,7 @@ def send_file(channel, file)
   @client.files_upload(
     channels: channel,
     as_user: true,
-    file: Faraday::UploadIO.new('ipdo.pdf', 'application/pdf'),
+    file: Faraday::UploadIO.new('data/send/ipdo.pdf', 'application/pdf'),
     title: file,
     filename: file,
     initial_comment: 'Segue o ' + file + '!'
