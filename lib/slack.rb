@@ -1,9 +1,5 @@
-require 'slack-ruby-client'
-require 'uri'
-require 'net/http'
-
 Slack.configure do |config|
-  config.token = 'xoxb-198073611270-B8LdK1DLejpmLbQWBhlKMKT4'
+  config.token = 'xoxb-198073611270-Rkq6A9IzYiOgU5POxAMXYppp'
 end
 @client = Slack::Web::Client.new
 

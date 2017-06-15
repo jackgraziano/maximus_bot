@@ -1,6 +1,4 @@
-require 'date'
-require_relative 'slack'
-require_relative 'ipdo'
+require_relative 'lib/bundler'
 
 def main
   run_ipdo

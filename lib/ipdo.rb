@@ -1,7 +1,3 @@
-require 'date'
-require 'open-uri'
-require 'net/http'
-
 def run_ipdo
   today = Date.today
   weekday = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"][today.wday-1]
