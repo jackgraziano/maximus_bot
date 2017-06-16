@@ -34,12 +34,12 @@ def wait_for_ipdo(date)
   uri = URI.parse(url)
   result = Net::HTTP.start(uri.host, uri.port) { |http| http.get(uri.path) }
   code = result.code.to_i
-  puts "code: #{code}, date: #{date}, will enter loop if 404"
+  puts "code: #{code}, date: #{date}, #{Time.now}, will enter loop if 404"
   while code != 200
     sleep(60)
     result = Net::HTTP.start(uri.host, uri.port) { |http| http.get(uri.path) }
     code = result.code.to_i
-    puts "code: #{code}, date: #{date}, inside loop"
+    puts "code: #{code}, date: #{date}, #{Time.now}, inside loop"
   end
 
   #download
