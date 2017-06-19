@@ -79,6 +79,5 @@ def run_mapas
   download_gefs
   make_gifs
   make_pdf
+  send_maps_to_slack "mapas_#{Date.today.strftime("%d-%m-%Y")}.pdf"
 end
-
-run_mapas

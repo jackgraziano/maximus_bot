@@ -51,5 +51,5 @@ def wait_for_ipdo(date)
   }
 
   #send to slack
-  send_file('#ipdo', ipdo_file_name(date)[0])
+  send_ipdo_to_slack ipdo_file_name(date)[0]
 end
