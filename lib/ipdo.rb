@@ -45,7 +45,7 @@ def wait_for_ipdo(date)
   #download
   Net::HTTP.start("www.ons.org.br") { |http|
     resp = http.get(url)
-    open('data/send/ipdo.pdf', "wb") { |file|
+    open('#{File.expand_path File.dirname(__FILE__)}/data/send/ipdo.pdf', "wb") { |file|
       file.write(resp.body)
      }
   }
