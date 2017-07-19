@@ -17,4 +17,4 @@ require 'fileutils'
 require_relative 'slack'
 require_relative 'mapas'
 require_relative 'ipdo'
-
+require_relative 'update_www'

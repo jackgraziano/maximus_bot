@@ -9,3 +9,5 @@ gem 'wkhtmltopdf-binary'
 gem 'dotenv'
 gem 'whenever', require: false
 gem 'rake'
+gem 'nokogiri'
+gem 'httparty'

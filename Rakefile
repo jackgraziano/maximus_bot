@@ -3,6 +3,6 @@
 namespace :maximus do
   desc "Run MaximusBot Routine"
   task :run do
-    ruby "app.rb"
+    ruby "#{File.expand_path File.dirname(__FILE__)}/app.rb"
   end
 end
