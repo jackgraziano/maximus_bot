@@ -10,7 +10,7 @@ def download_eta
     url = "/images/operacao_integrada/meteorologia/eta/shad50_#{n}.gif"
     Net::HTTP.start("www.ons.org.br") { |http|
       resp = http.get(url)
-      open("#{File.expand_path File.dirname(__FILE__)}/code/maximus_bot/data/mapas/eta/shad50_#{n.to_s.rjust(2,"0")}.gif", "wb") { |file|
+      open("#{File.expand_path File.dirname(__FILE__)}/data/mapas/eta/shad50_#{n.to_s.rjust(2,"0")}.gif", "wb") { |file|
         file.write(resp.body)
        }
     }
