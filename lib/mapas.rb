@@ -64,10 +64,7 @@ def download_gefs
 end
 
 def make_pdf
-  pdf = WickedPdf.new.pdf_from_html_file(
-                    "data/mapas/mapas.html",
-                    orientation: 'Landscape'
-        )
+  pdf = WickedPdf.new.pdf_from_html_file("#{Dir.pwd}/data/mapas/mapas.html", orientation: 'Landscape')
   File.open('data/send/mapas.pdf', 'wb') do |file|
     file << pdf
   end
