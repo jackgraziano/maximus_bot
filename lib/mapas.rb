@@ -56,7 +56,7 @@ def download_gefs
     url = "/images/operacao_integrada/meteorologia/global/glob50_#{n}.gif"
     Net::HTTP.start("www.ons.org.br") { |http|
       resp = http.get(url)
-      open("#{File.expand_path File.dirname(__FILE__)}}/code/maximus_bot/data/mapas/global/glob50_#{n.to_s.rjust(2,"0")}.gif", "wb") { |file|
+      open("#{File.expand_path File.dirname(__FILE__)}}/data/mapas/global/glob50_#{n.to_s.rjust(2,"0")}.gif", "wb") { |file|
         file.write(resp.body)
        }
     }
