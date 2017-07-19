@@ -65,7 +65,7 @@ end
 
 def make_pdf
   pdf = WickedPdf.new.pdf_from_html_file(
-                    '/home/jackson/code/maximus_bot/data/mapas/mapas.html',
+                    "../data/mapas/mapas.html",
                     orientation: 'Landscape'
         )
   File.open('data/send/mapas.pdf', 'wb') do |file|

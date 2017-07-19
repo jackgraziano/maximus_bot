@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'slack-ruby-client'
+# sudo apt-get install libmagickwand-dev imagemagick se rmagick der erro
 gem 'rmagick'
 gem 'activesupport'
 gem 'wicked_pdf'
