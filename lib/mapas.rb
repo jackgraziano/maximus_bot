@@ -1,8 +1,8 @@
 include Magick
 
 def clean_maps
-  FileUtils.rm_rf(Dir.glob('data/mapas/eta/*'))
-  FileUtils.rm_rf(Dir.glob('data/mapas/global/*'))
+  FileUtils.rm_rf(Dir.glob('#{Dir.pwd}/data/mapas/eta/*'))
+  FileUtils.rm_rf(Dir.glob('#{Dir.pwd}/data/mapas/global/*'))
 end
 
 def download_eta
